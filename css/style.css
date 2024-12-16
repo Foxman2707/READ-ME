@@ -1,0 +1,8 @@
+/* Style pour centrer les images dans leurs cartes */
+.card-img-top {
+    width: 180px;    /* Largeur fixe de 180px */
+    height: 250px;   /* Hauteur fixe de 250px */
+    object-fit: cover;  /* L'image s'ajuste tout en gardant ses proportions */
+    margin-left: auto;  /* Centrer horizontalement */
+    margin-right: auto; /* Centrer horizontalement */
+}
