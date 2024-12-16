@@ -1,8 +1,111 @@
-/* Style pour centrer les images dans leurs cartes */
-.card-img-top {
-    width: 180px;    /* Largeur fixe de 180px */
-    height: 250px;   /* Hauteur fixe de 250px */
-    object-fit: cover;  /* L'image s'ajuste tout en gardant ses proportions */
-    margin-left: auto;  /* Centrer horizontalement */
-    margin-right: auto; /* Centrer horizontalement */
+/* Définir le fond du body en bleu ciel */
+body {
+    background-color: #87CEEB; /* Bleu ciel */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centrer le titre principal h1 */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Container pour centrer les cartes et ajouter un padding */
+.container {
+    max-width: 1200px; /* Limiter la largeur du conteneur */
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 0 15px;
+}
+
+/* Style pour les cartes */
+.card {
+    border: 1px solid #ddd; /* Bordure claire */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre autour des cartes */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: white; /* Fond blanc pour chaque carte */
+}
+
+/* Effet au survol des cartes */
+.card:hover {
+    transform: translateY(-10px); /* Légère remontée au survol */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+/* Centrer le texte dans le body des cartes */
+.card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style pour le titre de la carte */
+.card-body .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Style pour la description de la carte */
+.card-body .card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Style pour le bouton "J'aime" */
+.btn-like {
+    background-color: transparent; /* Pas de fond */
+    border: none;                  /* Pas de bordure */
+    font-size: 1.25rem;            /* Taille de la police */
+    color: #555;                   /* Couleur par défaut du texte */
+    cursor: pointer;              /* Curseur pointer */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Changement de couleur du texte au survol du bouton */
+.btn-like:hover {
+    color: #007bff; /* Couleur bleue au survol */
+}
+
+/* Style pour l'icône de la main */
+.icon {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+/* Disposition de la grille de cartes avec plus d'espace */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centrer les cartes */
+    margin-top: 30px;
+}
+
+/* Disposition des cartes en plus petites résolutions */
+.col {
+    flex: 1 1 30%; /* Cartes prennent 30% de largeur sur grands écrans */
+    max-width: 300px; /* Largeur maximale des cartes */
+    box-sizing: border-box;
+}
+
+/* Ajustement pour petits écrans */
+@media (max-width: 768px) {
+    .col {
+        flex: 1 1 45%; /* Cartes prennent 45% de la largeur */
+    }
+}
+
+@media (max-width: 480px) {
+    .col {
+        flex: 1 1 100%; /* Cartes prennent 100% de la largeur */
+    }
 }
